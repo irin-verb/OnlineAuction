@@ -14,6 +14,8 @@ _Приложение было разработано командой из 2у�
 
 ## Preparation for work
 
+Точка входа в веб-приложение - файл index.jsp в папке WebContent / The entry point to the web application is the index.jsp file in the WebContent folder
+
 Требуемое для работы приложения программное обеспечение / Required software for the application to work
 
 Название | Версия | Назначение
