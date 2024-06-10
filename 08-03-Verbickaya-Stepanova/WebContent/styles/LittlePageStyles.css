@@ -1,0 +1,307 @@
+/* Окошко под карточку товара или сделки */
+/* Стили для вертикальной левой шапки */
+.info-container {
+	position: fixed;
+	bottom: 11px; /* Отступ снизу */
+	right: 20px; /* Отступ справа */
+	width: 330px; /* Ширина вашей шапки */
+	height: 396px;
+	/* Высота вашей шапки, можно настроить по необходимости */
+	background-color: #e8dcd8; /* Светло-розовый цвет фона страницы */
+	color: #fff; /* Цвет текста в шапке */
+	padding: 0;
+	/*right: 10px;  Отступы внутри шапки */
+	/* Дополнительные стили для текста, ссылок и другого содержимого */
+	display: flex;
+	justify-content: center; /* Выравнивание по горизонтали в центре */
+	align-items: center;
+	right: 10px; /* Отступ справа */
+	flex-direction: column; /* Отображение элементов вертикально */
+}
+
+.info-container button {
+	background-color: #444; /* Темно-серый цвет фона */
+	color: white; /* Белый цвет текста */
+	font-family: Arial, sans-serif; /* Шрифт Arial */
+	border: none; /* Тонкая черная граница */
+	font-size: 18px;
+	border-radius: 5px; /* Закругленные края */
+	padding: 10px 20px; /* Отступы внутри кнопки */
+	cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+	transition: background-color 0.2s, color 0.2s;
+	text-decoration: none; /* Убираем подчеркивание */
+	font-weight: bold; /* Жирное начертание */
+	cursor: pointer; /* Изменить курсор при наведении */
+}
+
+.info-container button:hover {
+	background-color: #7a6761; /* Новый цвет фона при наведении */
+}
+
+.little-page-container {
+	position: fixed;
+	bottom: 11px; /* Отступ снизу */
+	right: 10px; /* Отступ справа */
+	width: 350px; /* Ширина вашей шапки */
+	height: 396px;
+	/* Высота вашей шапки, можно настроить по необходимости */
+	background-color: rgb(249, 249, 249); /* Цвет фона шапки */
+	color: #fff; /* Цвет текста в шапке */
+	/*padding: 10px;*/
+	/*right: 10px;  Отступы внутри шапки */
+	/* Дополнительные стили для текста, ссылок и другого содержимого */
+	border: 2px solid #333; /* Ширина и цвет рамки вокруг таблицы */
+	display: flex;
+	justify-content: center; /* Выравнивание по горизонтали в центре */
+	align-items: center;
+	right: 10px; /* Отступ справа */
+	flex-direction: column; /* Отображение элементов вертикально */
+	background: linear-gradient(to bottom, #444 50%, #666 50%);
+	/* Градиентное заполнение контейнера */
+}
+
+.little-page-top-header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	height: 50px;
+	display: flex;
+	align-items: center; /* Выравнивание по центру по вертикали */
+	width: 100%; /* Установите желаемую ширину, например, 100% */
+	padding-left: 30px;
+	/* Пример отступа слева, замените на нужное значение */
+}
+
+.little-page-top-header button {
+	font-family: 'Arial', sans-serif;
+	/* Используем тот же шрифт, что и для h1 */
+	font-size: 24px; /* Используем тот же размер шрифта, что и для h1 */
+	font-weight: bold; /* Используем тот же жирный шрифт, что и для h1 */
+	color: white; /* Используем тот же цвет текста, что и для h1 */
+	background-color: #666;
+	border: none; /* Убираем границу кнопки */
+	padding: 0; /* Убираем внутренние отступы */
+	cursor: pointer; /* Изменяем курсор при наведении */
+	padding: 5px 5px; /* Увеличьте отступы, чтобы сделать кнопку больше */
+	border-radius: 5px;
+	transition: background-color 0.2s, color 0.2s;
+	display: block; /* Расположить кнопку как блочный элемент */
+	margin-top: 16px;
+	margin-left: -5px;
+}
+
+.little-page-top-header button:hover {
+	background-color: #7a6761;
+	/* Цвет выделения при наведении */
+}
+
+.little-page-bottom-header, .little-page-bottom-header-spec {
+	position: sticky;
+	bottom: 0;
+	z-index: 1;
+	height: 20px;
+	width: 100%; /*  Установите желаемую ширину, например, 100% */
+	/*justify-content: center; Выравнивание по горизонтали в центре
+	align-items: center; */
+	display: flex; /* Используем flex-контейнер */
+	justify-content: center; /* Выравнивание по горизонтали в центре */
+	align-items: center; /* Выравнивание по вертикали в центре */
+	margin-top: 20px; /* Добавляем отступ вниз */
+}
+
+.little-page-bottom-header-spec {
+	height: 40px;
+	margin-top: 2px; /* Добавляем отступ вниз */
+}
+
+.little-page-content {
+	flex: 1;
+	/*margin-top: 10px;  Отступ сверху, чтобы избежать перекрытия */
+	overflow-y: auto;
+	overflow-x: hidden;
+	/* Добавление полос прокрутки, если содержимое не помещается */
+	background-color: rgb(249, 249, 249); /* Цвет фона шапки */
+	width: 100%; /*Установите желаемую ширину, например, 100% */
+	max-width: 100%;
+	/* Опционально: ограничение максимальной ширины контейнера */
+	word-wrap: break-word;
+	/* Перенос текста на новую строку без пробелов */
+	text-align: justify; /* Выравнивание текста по ширине */
+}
+
+.string-container {
+	display: block;
+	margin-bottom: 5px;
+	/* Измените значение на необходимый вам отступ снизу */
+}
+
+.little-page-container h1 {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 24px; /* Размер шрифта для заголовков */
+	font-weight: bold; /* Жирный шрифт для заголовков */
+	color: white; /* Белый цвет текста */
+}
+
+.little-page-container h2, .string-container h2 {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 16px; /* Размер шрифта для заголовков */
+	font-weight: bold; /* Жирный шрифт для заголовков */
+	color: #000; /* Цвет текста */
+}
+
+.little-page-container h2 {
+	margin-top: 20px; /* Отступ сверху (указанный размер, например, 20px) */
+	font-size: 18px; /* Размер шрифта для заголовков */
+	text-align: center; /* Выравнивание по центру */
+}
+
+.string-container h2 {
+	font-size: 15px; /* Размер шрифта для заголовков */
+}
+
+/* Стилизация абзацев */
+.little-page-container p, .string-container p {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 14px; /* Увеличить размер шрифта */
+	line-height: 1.6; /* Межстрочный интервал */
+	color: #333; /* Цвет текста */
+	text-align: left; /* Выравнивание текста по левому краю */
+	margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стилизация абзацев */
+.little-page-container p {
+	padding-right: 10px;
+	padding-left: 10px;
+	/* Отступ слева (указанный размер, например, 20px) */
+}
+
+.string-container p {
+	display: inline;
+	padding-left: 0;
+}
+
+.string-container h2 {
+	display: inline;
+	padding-left: 10px;
+}
+
+.little-page-bottom-header button {
+	background-color: #444; /* Темно-серый цвет фона */
+	color: white; /* Белый цвет текста */
+	font-family: Arial, sans-serif; /* Шрифт Arial */
+	border: none; /* Тонкая черная граница */
+	font-size: 16px;
+	border-radius: 5px; /* Закругленные края */
+	padding: 5px 10px; /* Отступы внутри кнопки */
+	cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+	transition: background-color 0.2s, color 0.2s;
+	text-decoration: none; /* Убираем подчеркивание */
+	font-weight: bold; /* Жирное начертание */
+	cursor: pointer; /* Изменить курсор при наведении */
+	margin: 0 5px;
+	/* Установить одинаковые отступы слева и справа для каждой кнопки */
+}
+
+.little-page-bottom-header-spec button {
+	background-color: #444; /* Темно-серый цвет фона */
+	color: white; /* Белый цвет текста */
+	font-family: Arial, sans-serif; /* Шрифт Arial */
+	border: none; /* Тонкая черная граница */
+	font-size: 16px;
+	border-radius: 5px; /* Закругленные края */
+	padding: 5px 10px; /* Отступы внутри кнопки */
+	cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+	transition: background-color 0.2s, color 0.2s;
+	text-decoration: none; /* Убираем подчеркивание */
+	font-weight: bold; /* Жирное начертание */
+	cursor: pointer; /* Изменить курсор при наведении */
+	margin: 0 5px;
+	/* Установить одинаковые отступы слева и справа для каждой кнопки */
+}
+
+.little-page-bottom-header button:hover {
+	background-color: #5b5b5b; /* Новый цвет фона при наведении */
+}
+
+.little-page-bottom-header-spec button:hover {
+	background-color: #5b5b5b; /* Новый цвет фона при наведении */
+}
+
+.win, .lose {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 15px; /* Увеличить размер шрифта */
+	line-height: 1.6; /* Межстрочный интервал */
+	color: #333; /* Цвет текста */
+	text-align: left; /* Выравнивание текста по левому краю */
+	margin-bottom: 15px; /* Отступ снизу */
+	padding-right: 10px;
+	padding-left: 10px;
+	font-weight: bold; /* Жирное начертание */
+}
+
+.win {
+	color: #03a36e; /* Цвет текста */
+}
+
+/* Стилизация абзацев */
+.lose {
+	color: #a31b03; /* Цвет текста */
+}
+
+textarea {
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	width: 315px;
+	padding-left: 5px;
+	margin-left: 10px;
+}
+
+/* Стили для контейнера <select> */
+select {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	color: black;
+	font-size: 13px;
+	outline: none;
+	transition: border-color 0.2s;
+	width: 315px; /* Занимать всю доступную ширину */
+	margin-left: 10px;
+	height: 35px; /* Устанавливаем высоту поля для ввода */
+}
+
+/* Стили для опций внутри <select> */
+select option {
+	padding: 10px;
+	background-color: #fff;
+	color: #333;
+	font-size: 13px;
+}
+
+/* Стили для выделенного элемента */
+select option[selected] {
+	background-color: #fff;
+	transition: background-color 0.2s;
+	color: black;
+}
+
+.little-page-content input[type="text"] {
+	padding: 10px; /* Отступы вокруг текста */
+	border: 1px solid #ccc; /* Граница с тенью */
+	border-radius: 5px; /* Закруглить углы */
+	font-size: 14px; /* Размер шрифта */
+	width: 315px; /* Занимать всю доступную ширину */
+	height: 30px; /* Устанавливаем высоту поля для ввода */
+	margin-left: 10px;
+	display: inline;
+}
+
+/* Стилизация поля ввода текста при фокусе */
+.little-page-conten input[type="text"]:focus {
+	border-color: #3498db; /* Изменить цвет границы при фокусе */
+	box-shadow: 0 0 5px #3498db; /* Тень при фокусе */
+}

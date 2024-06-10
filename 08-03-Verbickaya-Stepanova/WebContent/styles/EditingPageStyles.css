@@ -1,0 +1,42 @@
+.little-page-bottom-header-spec {
+	position: sticky;
+	bottom: 0;
+	z-index: 1;
+	height: 40px;
+	width: 100%;
+	/*  Установите желаемую ширину, например, 100% */
+	/*justify-content: center; Выравнивание по горизонтали в центре
+	align-items: center; */
+	display: flex; /* Используем flex-контейнер */
+	justify-content: center; /* Выравнивание по горизонтали в центре */
+	align-items: center; /* Выравнивание по вертикали в центре */
+	margin-top: 2px;
+	width: 100%; /* Добавляем отступ вниз */
+}
+
+.little-page-bottom-header-spec button {
+	background-color: #444; /* Темно-серый цвет фона */
+	color: white; /* Белый цвет текста */
+	font-family: Arial, sans-serif; /* Шрифт Arial */
+	border: none; /* Тонкая черная граница */
+	font-size: 16px;
+	border-radius: 5px; /* Закругленные края */
+	padding: 5px 10px; /* Отступы внутри кнопки */
+	cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+	transition: background-color 0.2s, color 0.2s;
+	text-decoration: none; /* Убираем подчеркивание */
+	font-weight: bold; /* Жирное начертание */
+	cursor: pointer; /* Изменить курсор при наведении */
+	margin: 0 5px;
+	/* Установить одинаковые отступы слева и справа для каждой кнопки */
+}
+
+.little-page-bottom-header-spec button:hover {
+	background-color: #5b5b5b; /* Новый цвет фона при наведении */
+}
+
+.info-container p {
+	word-wrap: break-word;
+	/* Перенос текста на новую строку без пробелов */
+	text-align: justify; /* Выравнивание текста по ширине */
+}

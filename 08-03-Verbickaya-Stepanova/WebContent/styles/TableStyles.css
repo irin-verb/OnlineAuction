@@ -1,0 +1,97 @@
+/* Стили для контейнера таблицы */
+.table-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 80px; /* Смещение вниз */
+	margin-left: -160px; /* Смещение вправо */
+	width: 50%; /* Установите желаемую ширину контейнера */
+	overflow: auto; /* Добавьте прокручивание, если необходимо */
+}
+
+/* Стили для таблицы */
+table {
+	font-family: 'Arial', sans-serif;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 2px solid #333; /* Ширина и цвет рамки вокруг таблицы */
+	table-layout: fixed; /* Фиксированная ширина столбцов */
+}
+
+/* Устанавливаем ширину для всех столбцов */
+th, td {
+	width: 20%; /* Здесь можно установить желаемую ширину в процентах */
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+/* Стили для заголовков */
+th {
+	font-size: 18px;
+	text-align: left;
+	padding: 10px;
+	border: 1px solid #ccc;
+	position: sticky; /* Делаем заголовок "липким" */
+	top: 0; /* Закрепляем заголовок вверху контейнера */
+	z-index: 1;
+	/* Добавляем z-index, чтобы заголовок был поверх содержимого */
+}
+
+/* Стили для ячеек данных */
+td {
+	font-size: 14px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+	/* Установить вертикальное выравнивание по центру */
+}
+
+/* Стили для первой строки (названия столбцов) */
+tr:first-child th {
+	background-color: #555; /* Темно-серый цвет фона */
+	color: #fff; /* Белый цвет для текста в первой строке */
+}
+/* Стили для строк данных (чередование цветов) */
+tr:nth-child(even) {
+	background-color: rgb(220, 220, 220);
+}
+
+tr:nth-child(odd) {
+	background-color: rgb(249, 249, 249);
+	/* Здесь укажите желаемый цвет для нечетных строк */
+}
+
+/* Стили для скроллинга таблицы */
+table {
+	display: block;
+	overflow-x: auto;
+}
+
+/* Определение максимальной высоты таблицы, чтобы сделать её прокручиваемой */
+table {
+	max-height: 400px; /* Измените высоту по вашему усмотрению */
+}
+
+/* Стили для кнопок в таблице */
+table button {
+	background-color: inherit;
+	/* Унаследовать цвет фона от родительской ячейки */
+	border: none; /* Убрать границу */
+	cursor: pointer; /* Добавить курсор при наведении */
+	padding: 0; /* Убрать отступы */
+	font-size: 16px; /* Размер шрифта кнопки */
+	color: inherit; /* Унаследовать цвет текста от родительской ячейки */
+	text-align: left; /* Выровнять текст по левому краю */
+	transition: background-color 0.2s, color 0.2s;
+	border-radius: 3px;
+	padding: 2px 5px; /* Увеличьте отступы, чтобы сделать кнопку больше */
+	display: inline-block; /* Добавьте это свойство */
+	font-weight: bold; /* Добавьте это свойство для сделать текст жирным */
+}
+
+/* Стили для кнопок в таблице при наведении */
+table button:hover {
+	background-color: #c9c9c9; /* Новый цвет фона при наведении */
+}

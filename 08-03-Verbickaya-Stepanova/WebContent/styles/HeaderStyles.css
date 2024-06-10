@@ -1,0 +1,101 @@
+/* Стили для основной шапки */
+header {
+	background-color: #333; /* Темно-серый цвет фона */
+	color: #fff;
+	padding: 10px;
+	width: 100%; /* Занимает всю ширину экрана */
+	position: fixed; /* Зафиксированный элемент сверху */
+	top: 0; /* Прикрепляется к верхнему краю экрана */
+	z-index: 3;
+}
+
+/* Стили для вертикальной левой шапки */
+.sideheader {
+	background-color: #666; /* Темно-серый цвет */
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	top: 60px;
+	/* Отступ от верхнего края (можете изменить на нужное значение) */
+	left: 0; /* Теперь прижата к левому краю */
+	width: 150px;
+	/* Увеличьте ширину вертикальной шапки на 50px (или другое значение) */
+	/*height: calc(100% - 60px);  Занимает оставшуюся высоту экрана */
+	height: 100%; /* Занимает всю высоту экрана */
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	/* Это свойство прижимает элементы к левому краю */
+	z-index: 2; /* Чтобы вертикальная шапка была за главной */
+	justify-content: center;
+	margin-top: -50px;
+}
+
+/* Стили для меню навигации в шапке */
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	display: inline;
+	margin-right: 20px;
+}
+
+header button, .sideheader button {
+	background-color: #333; /* Темно-серый цвет фона */
+	color: white; /* Белый цвет текста */
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 28px;
+	margin: 0;
+	margin-left: 20px; /* Отступ слева от левой границы шапки */
+	text-decoration: none; /* Убираем подчеркивание */
+	font-weight: bold; /* Жирное начертание */
+	padding: 5px 5px; /* Увеличьте отступы, чтобы сделать кнопку больше */
+	border-radius: 5px;
+	transition: background-color 0.2s, color 0.2s;
+	border: none; /* Убрать границу */
+	cursor: pointer; /* Изменить курсор при наведении */
+	display: block; /* Расположить кнопку как блочный элемент */
+}
+
+.sideheader button {
+	margin-left: 0px; /* Отступ слева от левой границы шапки */
+	background-color: #666; /* Темно-серый цвет */
+	text-align: left;
+}
+
+header button.title {
+	font-size: 40px;
+}
+
+header button.small, .sideheader button.small {
+	font-size: 18px;
+}
+
+header button.active {
+	background-color: #555;
+}
+
+.sideheader button.active {
+	background-color: #555;
+}
+
+/* При наведении курсора на кнопки внутри шапки */
+header button:hover, .sideheader button:hover {
+	background-color: #555; /* Новый цвет фона при наведении */
+	color: #fff; /* Новый цвет текста при наведении */
+}
+
+/* Чтобы форма не добавляла новых строк при использовании */
+form[name="logoutForm"], form[name="menuForm"], form[name="filterForm"]
+	{
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

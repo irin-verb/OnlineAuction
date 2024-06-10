@@ -1,0 +1,18 @@
+input[type="submit"] {
+	background-color: #333; /* Темно-серый цвет фона */
+	color: white; /* Белый цвет текста */
+	padding: 10px 20px; /* Отступы вокруг текста */
+	border: none; /* Убрать границу */
+	cursor: pointer; /* Изменить курсор при наведении */
+	display: block; /* Расположить кнопку как блочный элемент */
+	margin: 0 auto; /* Центрировать кнопку по горизонтали */
+	font-size: 18px;
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	border-radius: 5px;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+/* Стилизация кнопки при наведении */
+input[type="submit"]:hover {
+	background-color: #555; /* Темно-серый цвет фона при наведении */
+}

@@ -1,0 +1,27 @@
+body {
+	background-color: #e8dcd8; /* Светло-розовый цвет фона страницы */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Выравнивание по центру по вертикали */
+	align-items: center; /* Выравнивание по центру по горизонтали */
+	height: 100vh;
+	margin: 0;
+}
+
+/* Стилизация абзацев */
+p {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 16px; /* Увеличить размер шрифта */
+	line-height: 1.6; /* Межстрочный интервал */
+	color: #333; /* Цвет текста */
+	text-align: left; /* Выравнивание текста по левому краю */
+	margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стилизация заголовков */
+h1, h2, h3 {
+	font-family: 'Arial', sans-serif; /* Установить шрифт */
+	font-size: 24px; /* Размер шрифта для заголовков */
+	font-weight: bold; /* Жирный шрифт для заголовков */
+	color: #000; /* Цвет текста заголовков */
+}
