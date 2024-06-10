@@ -12,7 +12,11 @@
 
 _Приложение было разработано командой из 2ух человек / The application was developed by a team of 2 people_
 
+_Файлы .sql необходимо открывать в кодировке Cyrillic (Windows 1251) / .sql files must be opened in Cyrillic (Windows 1251) encoding_
+
 ## Preparation for work
+
+Перед началом работы необходимо подготовить базу данных - файл 02-03-Verbickaya-Stepanova-create_tables.sql необходим для ее создания, а 02-03-Verbickaya-Stepanova-insert_data.sql - для ее заполнения / Before starting work, you need to prepare a database - file 02-03-Verbickaya-Stepanova-create_tables.sql is needed to create it, and 02-03-Verbickaya-Stepanova-insert_data.sql is needed to fill it
 
 Точка входа в веб-приложение - файл index.jsp в папке WebContent / The entry point to the web application is the index.jsp file in the WebContent folder
 
